@@ -1,5 +1,4 @@
 int button1 = 12;
-int button2 = 11;
 
 bool start = false;
 bool victory = false;
@@ -15,16 +14,12 @@ void setup() {
     pinMode(i, OUTPUT);
   }
   pinMode(button1, INPUT);
-  pinMode(button2, INPUT);
   
 }
 
 void loop() {
   // Menu State
   while (start == false){
-    if (digitalRead(button2) == HIGH){
-      digitalWrite(3, HIGH);
-    }
     if (digitalRead(button1) == HIGH){
       start = true;
       break;
